@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: lendgraph
+
+  neo4j:
+    uri: ${NEO4J_URI:bolt://localhost:7687}
+    authentication:
+      username: ${NEO4J_USERNAME:neo4j}
+      password: ${NEO4J_PASSWORD:password}
+
+  data:
+    neo4j:
+      database: neo4j
+
+server:
+  port: ${PORT:8080}
+
+# JWT Configuration
+jwt:
+  secret: ${JWT_SECRET:404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970}
+  expiration: 86400000  # 24 hours in ms
+
+# Swagger UI
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+
+logging:
+  level:
+    com.lendgraph: DEBUG
+    org.springframework.security: INFO

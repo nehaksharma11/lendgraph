@@ -48,7 +48,7 @@ public class TrustService {
                 .onTimeRepayments(onTimeRepayments)
                 .latePayments(latePayments)
                 .defaults(defaults)
-                .setNetworkSize(Long.valueOf(network.size()));
+                .NetworkSize(Long.valueOf(network.size()));
                 .badges(badges)
                 .build();
     }
@@ -123,7 +123,7 @@ public class TrustService {
                 .riskLevel(riskLevel)
                 .riskScore(riskScore)
                 .defaultsInNetwork(defaultsInNetwork)
-                .setMutualConnections(Long.valueOf(mutualConnections.size()));
+                .MutualConnections(Long.valueOf(mutualConnections.size()));
                 .riskFlags(riskFlags)
                 .recommendation(recommendation)
                 .build();
